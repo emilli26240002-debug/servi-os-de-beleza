@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>MILLIX</title>
+
+    <link rel="stylesheet" href="estudio.css">
+</head>
+  <script src="estudio.js"></script>
+
+<body>
+
+    <h1>MILLIX</h1>
+
+    <h2>Cuidar de si mesma não é vaidade, é um ato de amor-próprio.</h2>
+
+    <a href="dados.html">
+        <button type="button" onclick="window.location.href='formulario.html'">
+    Abrir formulário
+    
+   </button>
+
+  
+
+    <script>const dadosSalvos = localStorage.getItem("dadosUsuario");
+
+    if (dadosSalvos) {
+
+        const dados = JSON.parse(dadosSalvos);
+
+        document.getElementById("dadosUsuario").innerHTML = `
+            <p><strong>Nome:</strong> ${dados.nome}</p>
+            <p><strong>Email:</strong> ${dados.email}</p>
+            <p><strong>Telefone:</strong> ${dados.telefone}</p>
+        `;
+
+    } else {
+
+        document.getElementById("dadosUsuario").innerHTML =
+            "<p>Nenhum dado cadastrado ainda.</p>";
+
+    }</script>
+
+</body>
+</html>
